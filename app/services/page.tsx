@@ -12,11 +12,14 @@ import {
   Keyboard,
   CreditCard,
   Phone,
-  ArrowRight
+  ArrowRight,
+  Zap,
+  Sparkles,
+  Star,
+  Shield,
+  Rocket
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import ServiceCard from "@/components/service-card"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
@@ -27,6 +30,7 @@ export default function Services() {
       title: "Internet Browsing",
       description: "High-speed fiber internet access for all your online needs",
       price: "KSh 2/min",
+      gradient: "from-blue-500 to-cyan-500",
       features: [
         "Fiber optic internet connection",
         "10+ browsing stations",
@@ -43,6 +47,7 @@ export default function Services() {
       title: "Printing Services",
       description: "Professional printing solutions for all document types",
       price: "KSh 5/page (B&W)",
+      gradient: "from-purple-500 to-pink-500",
       features: [
         "High-quality laser printing",
         "Color printing available",
@@ -59,6 +64,7 @@ export default function Services() {
       title: "Scanning & Photocopying",
       description: "Digital scanning and professional photocopying services",
       price: "KSh 10/page",
+      gradient: "from-emerald-500 to-teal-500",
       features: [
         "High-resolution scanning",
         "PDF and image formats",
@@ -75,6 +81,7 @@ export default function Services() {
       title: "Typing & Document Services",
       description: "Professional document preparation and formatting",
       price: "KSh 20/page",
+      gradient: "from-orange-500 to-red-500",
       features: [
         "CV and resume writing",
         "Cover letter creation",
@@ -91,6 +98,7 @@ export default function Services() {
       title: "Stationery & Supplies",
       description: "Complete range of office and school supplies",
       price: "Competitive prices",
+      gradient: "from-indigo-500 to-purple-500",
       features: [
         "Pens, pencils, markers",
         "Notebooks and exercise books",
@@ -107,6 +115,7 @@ export default function Services() {
       title: "M-Pesa & Mobile Money",
       description: "Full mobile money and financial services",
       price: "Standard Safaricom rates",
+      gradient: "from-green-500 to-emerald-500",
       features: [
         "Send and receive money",
         "Cash deposit and withdrawal",
@@ -125,238 +134,384 @@ export default function Services() {
       icon: FileText,
       title: "Lamination",
       description: "Protect your important documents",
-      price: "KSh 20-50"
+      price: "KSh 20-50",
+      gradient: "from-blue-400 to-indigo-400"
     },
     {
       icon: Camera,
       title: "Passport Photos",
       description: "Professional passport and ID photos",
-      price: "KSh 100"
+      price: "KSh 100",
+      gradient: "from-pink-400 to-rose-400"
     },
     {
       icon: HardDrive,
       title: "Computer Accessories",
       description: "USB drives, cables, and peripherals",
-      price: "Various"
+      price: "Various",
+      gradient: "from-gray-400 to-slate-400"
     },
     {
       icon: Mouse,
       title: "Computer Repairs",
       description: "Basic computer troubleshooting",
-      price: "On request"
+      price: "On request",
+      gradient: "from-yellow-400 to-orange-400"
     },
     {
       icon: Keyboard,
       title: "Data Recovery",
       description: "Recover lost files and data",
-      price: "KSh 500+"
+      price: "KSh 500+",
+      gradient: "from-teal-400 to-cyan-400"
     },
     {
       icon: CreditCard,
       title: "Card Services",
       description: "ID applications and renewals",
-      price: "Government rates"
+      price: "Government rates",
+      gradient: "from-violet-400 to-purple-400"
+    }
+  ]
+
+  const processSteps = [
+    {
+      number: "1",
+      title: "Visit Us",
+      description: "Come to our location in Changamwe with your requirements",
+      icon: ArrowRight,
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      number: "2",
+      title: "Consult",
+      description: "Our staff will guide you on the best service options",
+      icon: Sparkles,
+      gradient: "from-purple-500 to-pink-500"
+    },
+    {
+      number: "3",
+      title: "Execute",
+      description: "We&apos;ll complete your service with professional quality",
+      icon: Zap,
+      gradient: "from-emerald-500 to-teal-500"
+    },
+    {
+      number: "4",
+      title: "Deliver",
+      description: "Receive your completed work and make payment",
+      icon: Star,
+      gradient: "from-orange-500 to-red-500"
     }
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our <span className="text-yellow-300">Services</span>
+      {/* Revolutionary Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden particles-bg animate-gradient">
+        {/* Floating geometric shapes */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500/20 rounded-full animate-float"></div>
+          <div className="absolute top-40 right-20 w-16 h-16 bg-blue-500/20 rounded-lg rotate-45 animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-40 left-20 w-12 h-12 bg-cyan-500/20 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 bg-pink-500/20 rounded-lg animate-float" style={{animationDelay: '1s'}}></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl md:text-8xl font-bold mb-8 leading-tight">
+              <span className="block text-white drop-shadow-lg">Our Premium</span>
+              <div className="relative inline-block">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-3xl rounded-3xl transform scale-110"></div>
+                <span 
+                  className="block text-gradient-enhanced font-extrabold tracking-tight animate-text-glow relative z-10"
+                  data-text="Services"
+                  style={{
+                    background: 'linear-gradient(135deg, #38bdf8 0%, #a855f7 30%, #ec4899 60%, #f59e0b 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  Services
+                </span>
+              </div>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8">
-              Comprehensive digital and business services under one roof in Changamwe
+
+            <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive 
+              <span className="text-cyan-300 font-semibold"> digital solutions</span> and 
+              <span className="text-purple-300 font-semibold"> business services</span> under one 
+              <span className="text-pink-300 font-semibold"> futuristic roof</span> in Changamwe
             </p>
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3">
-              <a href="https://wa.me/254123456789" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                Get Quote on WhatsApp
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button className="group btn-morph bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-blue-600 text-white border-0 text-lg px-10 py-4 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
+                <a href="https://wa.me/254123456789" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+                  <Rocket className="h-6 w-6 group-hover:animate-bounce" />
+                  <span>Get Instant Quote</span>
+                  <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Main Services */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Main Services
+      {/* Main Services - Enhanced */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 glass rounded-full px-6 py-3 mb-6 border border-purple-200/50">
+              <Zap className="h-5 w-5 text-purple-600" />
+              <span className="text-purple-800 font-medium">Core Services</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              <span className="text-gray-900">Next-Gen</span>
+              <span className="block text-gradient bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text">
+                Digital Solutions
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our core services that serve the daily needs of our community
+            
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Our flagship services that power Changamwe&apos;s digital transformation
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transform-3d">
+            {mainServices.map((service, index) => (
+              <div 
+                key={index} 
+                className="group card-3d glass rounded-3xl border border-white/20 overflow-hidden hover:shadow-2xl transition-all duration-700"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="p-8">
+                  <div className="relative mb-6">
+                    <div className={`bg-gradient-to-br ${service.gradient} p-4 rounded-2xl w-fit group-hover:animate-pulse-glow transition-all duration-300`}>
+                      <service.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full animate-pulse opacity-80"></div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="text-3xl font-bold text-gradient bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text mb-6">
+                    {service.price}
+                  </div>
+                  
+                  <ul className="space-y-2 mb-8">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
+                        <span className="text-gray-700 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button className="w-full btn-morph bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white border-0 rounded-xl group-hover:shadow-xl transition-all duration-300">
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services - Enhanced */}
+      <section className="py-24 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 particles-bg"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Additional <span className="text-gradient bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text">Services</span>
+            </h2>
+            <p className="text-xl text-white/80 max-w-2xl mx-auto">
+              Specialized solutions for every digital need
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mainServices.map((service, index) => (
-              <ServiceCard key={index} {...service} ctaText="Learn More" ctaLink="/pricing" />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Additional Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Extra services to meet all your business and personal needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {additionalServices.map((service, index) => (
-              <Card key={index} className="bg-white hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="text-center pb-4">
-                  <div className="bg-blue-100 text-blue-600 p-3 rounded-full w-fit mx-auto mb-3">
-                    <service.icon className="h-6 w-6" />
-                  </div>
-                  <CardTitle className="text-lg">{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <div className="text-xl font-bold text-green-600 mb-3">{service.price}</div>
-                  <Button variant="outline" size="sm" className="w-full">
-                    <a href="/contact">Inquire</a>
-                  </Button>
-                </CardContent>
-              </Card>
+              <div key={index} className="glass rounded-3xl p-6 border border-white/20 text-center group transform hover:scale-105 transition-all duration-500">
+                <div className={`bg-gradient-to-r ${service.gradient} p-3 rounded-2xl w-fit mx-auto mb-4 group-hover:animate-pulse-glow`}>
+                  <service.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-cyan-300 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-white/70 mb-4 text-sm">
+                  {service.description}
+                </p>
+                <div className="text-2xl font-bold text-cyan-300 mb-4">{service.price}</div>
+                <Button className="w-full glass hover:glass-dark text-white border border-white/30 rounded-xl">
+                  <a href="/contact">Inquire</a>
+                </Button>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Service Process */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How It Works
+      {/* Service Process - Enhanced */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 glass rounded-full px-6 py-3 mb-6 border border-blue-200/50">
+              <Sparkles className="h-5 w-5 text-blue-600" />
+              <span className="text-blue-800 font-medium">Process</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              How It <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">Works</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Simple steps to get the services you need
+              Simple steps to access our futuristic services
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-xl font-bold">
-                1
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <div key={index} className="text-center group transform hover:scale-105 transition-all duration-500">
+                <div className="glass rounded-3xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300">
+                  <div className={`bg-gradient-to-r ${step.gradient} text-white rounded-2xl w-16 h-16 mx-auto mb-6 flex items-center justify-center text-2xl font-bold group-hover:animate-pulse-glow`}>
+                    {step.number}
+                  </div>
+                  <step.icon className="h-8 w-8 text-purple-600 mx-auto mb-4 group-hover:animate-bounce" />
+                  <h3 className="text-xl font-bold mb-4 text-gray-900 group-hover:text-purple-600 transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Visit Us</h3>
-              <p className="text-gray-600">Come to our location in Changamwe with your requirements</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-xl font-bold">
-                2
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Consult</h3>
-              <p className="text-gray-600">Our staff will guide you on the best service options</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-xl font-bold">
-                3
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Execute</h3>
-              <p className="text-gray-600">We&apos;ll complete your service with professional quality</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-blue-600 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-xl font-bold">
-                4
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Deliver</h3>
-              <p className="text-gray-600">Receive your completed work and make payment</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Special Offers */}
-      <section className="py-16 bg-blue-700 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Special Offers</h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Great deals for students, businesses, and regular customers
+      {/* Special Offers - Enhanced */}
+      <section className="py-24 relative overflow-hidden animate-gradient">
+        <div className="absolute inset-0 bg-black/20"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 glass rounded-full px-6 py-3 mb-8 border border-white/20">
+              <Star className="h-5 w-5 text-cyan-400 animate-pulse" />
+              <span className="text-white font-medium">Special Offers</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Exclusive
+              <span className="block text-gradient bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-neon">
+                Digital Deals
+              </span>
+            </h2>
+            
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Premium discounts for students, businesses, and loyal customers
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-white text-gray-900">
-              <CardHeader className="text-center">
-                <CardTitle className="text-xl text-blue-700">Student Discount</CardTitle>
-                <CardDescription>For all students with valid ID</CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">10% OFF</div>
-                <p className="text-sm text-gray-600 mb-4">On all printing and typing services</p>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Student Discount",
+                subtitle: "For all students with valid ID",
+                discount: "10% OFF",
+                description: "On all printing and typing services",
+                gradient: "from-blue-500 to-cyan-500"
+              },
+              {
+                title: "Bulk Printing",
+                subtitle: "For orders over 100 pages",
+                discount: "15% OFF",
+                description: "Save on large printing jobs",
+                gradient: "from-purple-500 to-pink-500"
+              },
+              {
+                title: "Business Package",
+                subtitle: "Monthly service bundle",
+                discount: "KSh 2,000",
+                description: "Includes printing, typing & internet",
+                gradient: "from-emerald-500 to-teal-500"
+              }
+            ].map((offer, index) => (
+              <div key={index} className="glass rounded-3xl p-8 border border-white/20 text-center group transform hover:scale-105 transition-all duration-500">
+                <div className={`bg-gradient-to-r ${offer.gradient} p-4 rounded-2xl w-fit mx-auto mb-6 group-hover:animate-pulse-glow`}>
+                  <Star className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                  {offer.title}
+                </h3>
+                <p className="text-white/70 mb-4">{offer.subtitle}</p>
+                <div className="text-4xl font-bold text-gradient bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text mb-2">
+                  {offer.discount}
+                </div>
+                <p className="text-white/60 text-sm mb-6">{offer.description}</p>
+                <Button className="w-full btn-morph bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 rounded-xl">
                   <a href="/contact">Claim Now</a>
                 </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white text-gray-900">
-              <CardHeader className="text-center">
-                <CardTitle className="text-xl text-blue-700">Bulk Printing</CardTitle>
-                <CardDescription>For orders over 100 pages</CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">15% OFF</div>
-                <p className="text-sm text-gray-600 mb-4">Save on large printing jobs</p>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  <a href="/contact">Get Quote</a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white text-gray-900">
-              <CardHeader className="text-center">
-                <CardTitle className="text-xl text-blue-700">Business Package</CardTitle>
-                <CardDescription>Monthly service bundle</CardDescription>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">KSh 2,000</div>
-                <p className="text-sm text-gray-600 mb-4">Includes printing, typing & internet</p>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  <a href="/contact">Learn More</a>
-                </Button>
-              </CardContent>
-            </Card>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Contact us today to discuss your specific needs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3">
-              <a href="https://wa.me/254123456789" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                <Phone className="mr-2 h-5 w-5" />
-                WhatsApp +254 123 456 789
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-3">
-              <a href="/contact">Visit Our Location</a>
-            </Button>
+      {/* Call to Action - Enhanced */}
+      <section className="py-24 bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 particles-bg"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center space-x-2 glass rounded-full px-6 py-3 mb-8 border border-white/20">
+              <Rocket className="h-5 w-5 text-cyan-400 animate-pulse" />
+              <span className="text-white font-medium">Ready to Start?</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Let&apos;s Transform Your
+              <span className="block text-gradient bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-neon">
+                Digital Experience
+              </span>
+            </h2>
+            
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Contact us today to discuss your specific digital service needs
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button className="group btn-morph bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-blue-600 text-white border-0 text-xl px-12 py-5 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
+                <a href="https://wa.me/254123456789" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+                  <Phone className="h-6 w-6 group-hover:animate-pulse" />
+                  <span>WhatsApp +254 123 456 789</span>
+                  <Zap className="h-6 w-6 group-hover:animate-bounce" />
+                </a>
+              </Button>
+              
+              <Button className="group glass hover:glass-dark text-white border border-white/30 text-xl px-12 py-5 rounded-2xl backdrop-blur-xl transition-all duration-500 hover:shadow-2xl">
+                <a href="/contact" className="flex items-center space-x-3">
+                  <Shield className="h-6 w-6 text-purple-400" />
+                  <span>Visit Our Hub</span>
+                  <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
