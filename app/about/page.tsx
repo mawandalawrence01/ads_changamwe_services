@@ -87,8 +87,8 @@ export default function About() {
                   provide these services but also contribute to the economic growth of our community.
                 </p>
                 <p className="text-gray-600">
-                  Today, CyberAds stands as a testament to what's possible when technology meets 
-                  community spirit. We're proud to be a part of Changamwe's growth story.
+                  Today, CyberAds stands as a testament to what&apos;s possible when technology meets 
+                  community spirit. We&apos;re proud to be a part of Changamwe&apos;s growth story.
                 </p>
               </div>
               <div className="bg-gray-100 p-8 rounded-lg">
@@ -144,7 +144,7 @@ export default function About() {
                 <p className="text-gray-600 text-center">
                   To provide accessible, reliable, and affordable technology and business services 
                   that empower individuals and businesses in Changamwe to achieve their goals and 
-                  contribute to the community's economic growth.
+                  contribute to the community&apos;s economic growth.
                 </p>
               </CardContent>
             </Card>

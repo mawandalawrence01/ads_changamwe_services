@@ -269,7 +269,7 @@ export default function Services() {
                 3
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Execute</h3>
-              <p className="text-gray-600">We'll complete your service with professional quality</p>
+              <p className="text-gray-600">We&apos;ll complete your service with professional quality</p>
             </div>
             <div className="text-center">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center text-xl font-bold">

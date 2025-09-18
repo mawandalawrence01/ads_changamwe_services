@@ -18,8 +18,6 @@ import {
   Users
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import ServiceCard from "@/components/service-card"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
@@ -142,12 +140,23 @@ export default function Home() {
             
 
             {/* Revolutionary Headline */}
-            <h1 className="text-5xl md:text-8xl font-bold mb-8  mt-30 leading-tight">
-              <span className="block text-white">The Future of</span>
-              <span className="block text-gradient bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-neon">
-                Digital Services
-              </span>
-              <span className="block text-white text-2xl md:text-4xl mt-4 font-light">
+            <h1 className="text-5xl md:text-8xl font-bold mb-8 mt-30 leading-tight">
+              <span className="block text-white drop-shadow-lg">The Future of</span>
+              <div className="relative inline-block">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-3xl rounded-3xl transform scale-110"></div>
+                <span 
+                  data-text="Digital Services"
+                  style={{
+                    background: 'linear-gradient(135deg, #38bdf8 0%, #a855f7 30%, #ec4899 60%, #f59e0b 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
+                  Digital Services
+                </span>
+              </div>
+              <span className="block text-white text-2xl md:text-4xl mt-4 font-light drop-shadow-lg">
                 in Changamwe
               </span>
             </h1>
@@ -225,7 +234,7 @@ export default function Home() {
             </h2>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Advanced technology meets exceptional service in Changamwe's most innovative tech hub
+              Advanced technology meets exceptional service in Changamwe&apos;s most innovative tech hub
             </p>
           </div>
           
@@ -361,7 +370,7 @@ export default function Home() {
                   </div>
                   
                   <p className="text-gray-700 italic leading-relaxed">
-                    "{testimonial.content}"
+                    &ldquo;{testimonial.content}&rdquo;
                   </p>
                   
                   <div className="mt-6 w-full h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent"></div>
@@ -391,7 +400,7 @@ export default function Home() {
             </h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Join thousands of satisfied customers who've experienced the future of digital services
+              Join thousands of satisfied customers who&apos;ve experienced the future of digital services
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

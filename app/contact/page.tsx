@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, MessageCircle, Directions, Car, Bus } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, MessageCircle, Navigation, Car, Bus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Header from "@/components/header"
@@ -26,7 +26,7 @@ export default function Contact() {
     {
       method: "Walking",
       description: "We're in the heart of Changamwe, walking distance from most residential areas and the railway station.",
-      icon: Directions
+      icon: Navigation
     }
   ]
 
@@ -42,7 +42,7 @@ export default function Contact() {
               Visit <span className="text-yellow-300">CyberAds</span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100">
-              Find us in the heart of Changamwe, Mombasa. We're here to serve you!
+              Find us in the heart of Changamwe, Mombasa. We&apos;re here to serve you!
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                   <div className="bg-blue-100 text-blue-600 p-3 rounded-full w-fit">
                     <Clock className="h-6 w-6" />
                   </div>
-                  <CardTitle>We're Open</CardTitle>
+                  <CardTitle>We&apos;re Open</CardTitle>
                   <CardDescription>Extended hours to serve you better</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -147,7 +147,7 @@ export default function Contact() {
                   
                   <div className="mt-6 p-4 bg-green-50 rounded-lg">
                     <p className="text-sm text-green-800">
-                      <strong>Note:</strong> We're almost always open! Even during holidays, 
+                      <strong>Note:</strong> We&apos;re almost always open! Even during holidays, 
                       we try to maintain limited hours to serve emergency needs.
                     </p>
                   </div>

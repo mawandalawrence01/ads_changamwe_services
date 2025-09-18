@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { Menu, X, Wifi, Phone, Zap, Sparkles } from "lucide-react"
+import { Wifi, Phone, Zap, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Header() {
