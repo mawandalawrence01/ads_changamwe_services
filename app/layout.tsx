@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "CyberAds - Your One-Stop Cyber & Stationery Hub in Changamwe",
   description: "CyberAds in Changamwe, Mombasa offers internet browsing, printing, photocopying, scanning, lamination, typing, stationery sales, computer accessories, and M-Pesa services. Affordable, reliable, and convenient.",
   keywords: "cyber café Changamwe, printing services Changamwe, stationery shop Mombasa, internet café Mombasa, M-Pesa services, photocopying, scanning, lamination",
+  other: {
+    "google-site-verification": "D9h8qRAfBDA-dhJpE62MgpcCPE4_zqwb3daEgi5VQB0",
+  },
   openGraph: {
     title: "CyberAds - Your One-Stop Cyber & Stationery Hub in Changamwe",
     description: "Affordable and reliable cyber café, printing, and stationery services in Changamwe, Mombasa.",
