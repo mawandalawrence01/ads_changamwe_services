@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { MapPin, Phone, Clock, Mail, Wifi } from "lucide-react"
+import { MapPin, Phone, Clock, Mail, Wifi, Globe, Code } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -9,17 +9,17 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-blue-600 text-white p-2 rounded-lg">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg">
                 <Wifi className="h-6 w-6" />
               </div>
               <div>
                 <h3 className="text-xl font-bold">CyberAds</h3>
-                <p className="text-sm text-gray-400">Changamwe, Mombasa</p>
+                <p className="text-sm text-gray-400">Digital Solutions Hub</p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm">
-              Your one-stop cyber café and stationery hub in Changamwe. 
-              Providing reliable internet, printing, and business services to the community.
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Your complete digital partner in Changamwe. From cyber services to custom software development, 
+              we provide comprehensive solutions for individuals and businesses.
             </p>
           </div>
 
@@ -27,36 +27,54 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <nav className="space-y-3">
-              <Link href="/" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="/" className="block text-gray-400 hover:text-white transition-colors duration-300">
                 Home
               </Link>
-              <Link href="/about" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="/about" className="block text-gray-400 hover:text-white transition-colors duration-300">
                 About Us
               </Link>
-              <Link href="/services" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="/services" className="block text-gray-400 hover:text-white transition-colors duration-300">
                 Services
               </Link>
-              <Link href="/pricing" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="/pricing" className="block text-gray-400 hover:text-white transition-colors duration-300">
                 Pricing
               </Link>
-              <Link href="/contact" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="/contact" className="block text-gray-400 hover:text-white transition-colors duration-300">
                 Contact
               </Link>
             </nav>
           </div>
 
-          {/* Services */}
+          {/* Services - Cyber Services First */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-3 text-gray-400 text-sm">
-              <li>Internet Browsing</li>
-              <li>Printing & Photocopying</li>
-              <li>Scanning & Lamination</li>
-              <li>Typing Services</li>
-              <li>Stationery Sales</li>
-              <li>Computer Accessories</li>
-              <li>M-Pesa Services</li>
-            </ul>
+            <div className="space-y-4">
+              <div>
+                <div className="flex items-center space-x-2 mb-2">
+                  <Wifi className="h-4 w-4 text-green-400" />
+                  <h5 className="text-green-400 font-medium text-sm">Cyber Services</h5>
+                </div>
+                <ul className="space-y-1 text-gray-400 text-sm ml-6">
+                  <li>Internet Browsing</li>
+                  <li>Printing & Photocopying</li>
+                  <li>Typing Services</li>
+                  <li>M-Pesa Services</li>
+                  <li>Scanning & Lamination</li>
+                </ul>
+              </div>
+              <div>
+                <div className="flex items-center space-x-2 mb-2">
+                  <Code className="h-4 w-4 text-blue-400" />
+                  <h5 className="text-blue-400 font-medium text-sm">Development</h5>
+                </div>
+                <ul className="space-y-1 text-gray-400 text-sm ml-6">
+                  <li>Web Design - KSh 45,000</li>
+                  <li>Mobile Applications - KSh 75,000</li>
+                  <li>Web Applications - KSh 80,000</li>
+                  <li>Custom Software</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Contact Info */}
@@ -96,7 +114,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} CyberAds. All rights reserved. | 
-            Designed for the Changamwe community.
+            Developed by CyberAds Development Team.
           </p>
         </div>
       </div>

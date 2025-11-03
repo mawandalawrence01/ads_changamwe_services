@@ -17,11 +17,22 @@ import {
   Sparkles,
   Star,
   Shield,
-  Rocket
+  Rocket,
+  Globe,
+  Monitor,
+  Code,
+  Smartphone as Mobile
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+
+// In your services/page.tsx
+export const metadata = {
+  title: "Cyber Services & Software Development in Changamwe | CyberAds",
+  description: "Professional cyber services including internet browsing, printing, photocopying, scanning, plus web design, mobile apps, and custom software development in Changamwe, Mombasa.",
+  keywords: "cyber services changamwe, printing mombasa, web design kenya, mobile app development, software development changamwe",
+}
 
 export default function Services() {
   const mainServices = [
@@ -30,7 +41,7 @@ export default function Services() {
       title: "Internet Browsing",
       description: "High-speed fiber internet access for all your online needs",
       price: "KSh 2/min",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-cyan-500 to-blue-500",
       features: [
         "Fiber optic internet connection",
         "10+ browsing stations",
@@ -81,7 +92,7 @@ export default function Services() {
       title: "Typing & Document Services",
       description: "Professional document preparation and formatting",
       price: "KSh 20/page",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-amber-500 to-orange-500",
       features: [
         "CV and resume writing",
         "Cover letter creation",
@@ -92,44 +103,95 @@ export default function Services() {
         "Data entry services",
         "Document formatting"
       ]
+    }
+  ]
+
+  const developmentServices = [
+    {
+      icon: Globe,
+      title: "Web Design",
+      description: "Professional website design with modern UI/UX principles",
+      price: "From KSh 45,000",
+      gradient: "from-blue-500 to-indigo-500",
+      features: [
+        "Responsive design for all devices",
+        "Modern UI/UX principles",
+        "SEO optimization",
+        "Fast loading speeds",
+        "Custom graphics and branding",
+        "Content management system",
+        "Social media integration",
+        "Google Analytics setup"
+      ]
     },
+    {
+      icon: Mobile,
+      title: "Mobile Applications",
+      description: "Native and cross-platform mobile apps for iOS and Android",
+      price: "From KSh 75,000",
+      gradient: "from-green-500 to-emerald-500",
+      features: [
+        "iOS and Android development",
+        "Cross-platform solutions",
+        "App store deployment",
+        "Push notifications",
+        "Offline functionality",
+        "API integration",
+        "User authentication",
+        "Performance optimization"
+      ]
+    },
+    {
+      icon: Monitor,
+      title: "Web Applications",
+      description: "Custom web applications for business automation and management",
+      price: "From KSh 80,000",
+      gradient: "from-purple-500 to-pink-500",
+      features: [
+        "Custom business logic",
+        "Database integration",
+        "User management systems",
+        "Real-time features",
+        "Payment gateway integration",
+        "Admin dashboard",
+        "Cloud deployment",
+        "Ongoing maintenance"
+      ]
+    },
+    {
+      icon: Code,
+      title: "Custom Software",
+      description: "Tailored software solutions for unique business requirements",
+      price: "Custom Quote",
+      gradient: "from-orange-500 to-red-500",
+      features: [
+        "Requirement analysis",
+        "Custom development",
+        "Quality assurance testing",
+        "Documentation",
+        "Training and support",
+        "Scalable architecture",
+        "Security implementation",
+        "Regular updates"
+      ]
+    }
+  ]
+
+  const additionalServices = [
     {
       icon: ShoppingBag,
       title: "Stationery & Supplies",
       description: "Complete range of office and school supplies",
       price: "Competitive prices",
-      gradient: "from-indigo-500 to-purple-500",
-      features: [
-        "Pens, pencils, markers",
-        "Notebooks and exercise books",
-        "A4 printing paper",
-        "Envelopes and folders",
-        "Staplers and clips",
-        "Calculators",
-        "Rulers and geometry sets",
-        "Art supplies"
-      ]
+      gradient: "from-indigo-500 to-purple-500"
     },
     {
       icon: Smartphone,
       title: "M-Pesa & Mobile Money",
       description: "Full mobile money and financial services",
       price: "Standard Safaricom rates",
-      gradient: "from-green-500 to-emerald-500",
-      features: [
-        "Send and receive money",
-        "Cash deposit and withdrawal",
-        "Bill payments (KPLC, Water)",
-        "Airtime purchase",
-        "Bank transfers",
-        "PayBill services",
-        "Buy Goods payments",
-        "Statement printing"
-      ]
-    }
-  ]
-
-  const additionalServices = [
+      gradient: "from-green-500 to-emerald-500"
+    },
     {
       icon: FileText,
       title: "Lamination",
@@ -152,20 +214,6 @@ export default function Services() {
       gradient: "from-gray-400 to-slate-400"
     },
     {
-      icon: Mouse,
-      title: "Computer Repairs",
-      description: "Basic computer troubleshooting",
-      price: "On request",
-      gradient: "from-yellow-400 to-orange-400"
-    },
-    {
-      icon: Keyboard,
-      title: "Data Recovery",
-      description: "Recover lost files and data",
-      price: "KSh 500+",
-      gradient: "from-teal-400 to-cyan-400"
-    },
-    {
       icon: CreditCard,
       title: "Card Services",
       description: "ID applications and renewals",
@@ -177,29 +225,29 @@ export default function Services() {
   const processSteps = [
     {
       number: "1",
-      title: "Visit Us",
-      description: "Come to our location in Changamwe with your requirements",
+      title: "Consultation",
+      description: "Discuss your project requirements and goals",
       icon: ArrowRight,
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       number: "2",
-      title: "Consult",
-      description: "Our staff will guide you on the best service options",
+      title: "Planning",
+      description: "Create detailed project specifications and timeline",
       icon: Sparkles,
       gradient: "from-purple-500 to-pink-500"
     },
     {
       number: "3",
-      title: "Execute",
-      description: "We&apos;ll complete your service with professional quality",
+      title: "Development",
+      description: "Build your solution with quality and precision",
       icon: Zap,
       gradient: "from-emerald-500 to-teal-500"
     },
     {
       number: "4",
-      title: "Deliver",
-      description: "Receive your completed work and make payment",
+      title: "Delivery",
+      description: "Launch and provide ongoing support",
       icon: Star,
       gradient: "from-orange-500 to-red-500"
     }
@@ -222,12 +270,12 @@ export default function Services() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-8xl font-bold mb-8 leading-tight">
-              <span className="block text-white drop-shadow-lg">Our Premium</span>
+              <span className="block text-white drop-shadow-lg">Digital Solutions</span>
               <div className="relative inline-block">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-3xl rounded-3xl transform scale-110"></div>
                 <span 
                   className="block text-gradient-enhanced font-extrabold tracking-tight animate-text-glow relative z-10"
-                  data-text="Services"
+                  data-text="& Services"
                   style={{
                     background: 'linear-gradient(135deg, #38bdf8 0%, #a855f7 30%, #ec4899 60%, #f59e0b 100%)',
                     WebkitBackgroundClip: 'text',
@@ -235,23 +283,22 @@ export default function Services() {
                     backgroundClip: 'text'
                   }}
                 >
-                  Services
+                  & Services
                 </span>
               </div>
             </h1>
 
             <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive 
-              <span className="text-cyan-300 font-semibold"> digital solutions</span> and 
-              <span className="text-purple-300 font-semibold"> business services</span> under one 
-              <span className="text-pink-300 font-semibold"> futuristic roof</span> in Changamwe
+              From <span className="text-cyan-300 font-semibold">cyber services</span> to 
+              <span className="text-purple-300 font-semibold"> custom software development</span> - 
+              your complete <span className="text-pink-300 font-semibold">digital transformation</span> partner
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button className="group btn-morph bg-gradient-to-r from-emerald-500 via-cyan-500 to-blue-500 hover:from-emerald-600 hover:via-cyan-600 hover:to-blue-600 text-white border-0 text-lg px-10 py-4 rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-500">
                 <a href="https://wa.me/254123456789" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
                   <Rocket className="h-6 w-6 group-hover:animate-bounce" />
-                  <span>Get Instant Quote</span>
+                  <span>Start Your Project</span>
                   <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -260,7 +307,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Main Services - Enhanced */}
+      {/* Main Cyber Services - Primary Focus */}
       <section className="py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
         
@@ -272,18 +319,18 @@ export default function Services() {
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-gray-900">Next-Gen</span>
+              <span className="text-gray-900">Premium</span>
               <span className="block text-gradient bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text">
-                Digital Solutions
+                Cyber Solutions
               </span>
             </h2>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our flagship services that power Changamwe&apos;s digital transformation
+              Essential digital services that power Changamwe&apos;s daily operations and community needs
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transform-3d">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 transform-3d">
             {mainServices.map((service, index) => (
               <div 
                 key={index} 
@@ -291,36 +338,107 @@ export default function Services() {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="p-8">
-                  <div className="relative mb-6">
-                    <div className={`bg-gradient-to-br ${service.gradient} p-4 rounded-2xl w-fit group-hover:animate-pulse-glow transition-all duration-300`}>
-                      <service.icon className="h-8 w-8 text-white" />
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="relative">
+                      <div className={`bg-gradient-to-br ${service.gradient} p-4 rounded-2xl w-fit group-hover:animate-pulse-glow transition-all duration-300`}>
+                        <service.icon className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full animate-pulse opacity-80"></div>
                     </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full animate-pulse opacity-80"></div>
+                    <div className="text-2xl font-bold text-gradient bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text">
+                      {service.price}
+                    </div>
                   </div>
                   
                   <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                     {service.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="text-3xl font-bold text-gradient bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text mb-6">
-                    {service.price}
-                  </div>
-                  
-                  <ul className="space-y-2 mb-8">
+                  <ul className="space-y-3 mb-8">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
-                        <span className="text-gray-700 text-sm">{feature}</span>
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex-shrink-0"></div>
+                        <span className="text-gray-700 text-sm leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <Button className="w-full btn-morph bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white border-0 rounded-xl group-hover:shadow-xl transition-all duration-300">
                     Learn More
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Development Services - Secondary Focus */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 glass rounded-full px-6 py-3 mb-6 border border-purple-200/50">
+              <Code className="h-5 w-5 text-purple-400" />
+              <span className="text-purple-200 font-medium">Development Services</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              <span className="text-white">Custom</span>
+              <span className="block text-gradient bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text">
+                Digital Solutions
+              </span>
+            </h2>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Professional software development services to grow your business online
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 transform-3d">
+            {developmentServices.map((service, index) => (
+              <div 
+                key={index} 
+                className="group card-3d glass rounded-3xl border border-white/20 overflow-hidden hover:shadow-2xl transition-all duration-700"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="p-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="relative">
+                      <div className={`bg-gradient-to-br ${service.gradient} p-4 rounded-2xl w-fit group-hover:animate-pulse-glow transition-all duration-300`}>
+                        <service.icon className="h-8 w-8 text-white" />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full animate-pulse opacity-80"></div>
+                    </div>
+                    <div className="text-2xl font-bold text-gradient bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text">
+                      {service.price}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex-shrink-0"></div>
+                        <span className="text-gray-300 text-sm leading-relaxed">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button className="w-full btn-morph bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white border-0 rounded-xl group-hover:shadow-xl transition-all duration-300">
+                    Get Quote
                   </Button>
                 </div>
               </div>
@@ -339,7 +457,7 @@ export default function Services() {
               Additional <span className="text-gradient bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text">Services</span>
             </h2>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Specialized solutions for every digital need
+              Comprehensive solutions for every digital and business need
             </p>
           </div>
           
@@ -373,14 +491,14 @@ export default function Services() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 glass rounded-full px-6 py-3 mb-6 border border-blue-200/50">
               <Sparkles className="h-5 w-5 text-blue-600" />
-              <span className="text-blue-800 font-medium">Process</span>
+              <span className="text-blue-800 font-medium">Our Process</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              How It <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">Works</span>
+              How We <span className="text-gradient bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">Work</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Simple steps to access our futuristic services
+              Streamlined process for both cyber services and development projects
             </p>
           </div>
           
@@ -424,7 +542,7 @@ export default function Services() {
             </h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Premium discounts for students, businesses, and loyal customers
+              Premium discounts for students, businesses, and development projects
             </p>
           </div>
           
@@ -433,22 +551,22 @@ export default function Services() {
               {
                 title: "Student Discount",
                 subtitle: "For all students with valid ID",
-                discount: "10% OFF",
+                discount: "15% OFF",
                 description: "On all printing and typing services",
                 gradient: "from-blue-500 to-cyan-500"
               },
               {
-                title: "Bulk Printing",
-                subtitle: "For orders over 100 pages",
-                discount: "15% OFF",
-                description: "Save on large printing jobs",
+                title: "Web Design Package",
+                subtitle: "For small businesses",
+                discount: "20% OFF",
+                description: "Website + hosting + 1 year support",
                 gradient: "from-purple-500 to-pink-500"
               },
               {
-                title: "Business Package",
-                subtitle: "Monthly service bundle",
-                discount: "KSh 2,000",
-                description: "Includes printing, typing & internet",
+                title: "Business Bundle",
+                subtitle: "Monthly service package",
+                discount: "KSh 5,000",
+                description: "Includes development consultation",
                 gradient: "from-emerald-500 to-teal-500"
               }
             ].map((offer, index) => (
@@ -465,7 +583,7 @@ export default function Services() {
                 </div>
                 <p className="text-white/60 text-sm mb-6">{offer.description}</p>
                 <Button className="w-full btn-morph bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 rounded-xl">
-                  <a href="/contact">Claim Now</a>
+                  <a href="/contact">Claim Offer</a>
                 </Button>
               </div>
             ))}
@@ -481,18 +599,18 @@ export default function Services() {
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center space-x-2 glass rounded-full px-6 py-3 mb-8 border border-white/20">
               <Rocket className="h-5 w-5 text-cyan-400 animate-pulse" />
-              <span className="text-white font-medium">Ready to Start?</span>
+              <span className="text-white font-medium">Ready to Transform?</span>
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Let&apos;s Transform Your
+              Let&apos;s Build Your
               <span className="block text-gradient bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-neon">
-                Digital Experience
+                Digital Future
               </span>
             </h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Contact us today to discuss your specific digital service needs
+              From cyber services to custom software - we&apos;ve got your digital needs covered
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
